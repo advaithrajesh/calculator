@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>My First Web Page</title>
+<meta charset="UTF-8"/>
+<meta name="viewport content='width=device-width,initial-scale="1.0"/>
+</head>
+<style>
+body{
+background-color: lightblue;
+}
+div
+{
+margin-left:450px;
+padding:100px 100px 100px 100px;
+border:10px double red;
+box-shadow:5px 5px 10px black;
+background:#887FCA;
+display:inline-block;
+	}
+h1
+{
+color:brown;
+text-shadow:7px 3px 15px blue;
+  text-align:center;
+}
+div1{
+   
+text-align:center;
+
+}
+</style>
+<script>
+function calc()
+{
+var first=parseFloat(document.getElementById('first').value);
+var second=parseFloat(document.getElementById('second').value);
+var oper=document.getElementById('operators').value;
+
+if(oper==='+')
+{
+(document.getElementById('result').value=first+second);
+
+}
+if(oper==='-')
+{
+document.getElementById('result').value=first-second;
+
+}
+if(oper==='*')
+{
+document.getElementById('result').value=first*second;
+
+}
+if(oper==='/')
+{
+document.getElementById('result').value=first/second;
+
+}
+}
+
+function clearResult() {
+    first = "";
+    second="";
+    result="";
+    document.getElementById('first').value = "";
+    document.getElementById('second').value = "";
+
+    document.getElementById('result').value = "";
+
+}
+
+</script>
+<body>
+<h1><u>CALCULATOR</u></h1>
+<div>
+</br>
+
+<label for="first"><b>Enter First Number:</b><label>
+<input id="first" type="text" name="first"=></br></br>
+<label for="second"><b>Enter Second Number:</b><label>
+<input id="second" type="text" name="second"><br></br>
+<label for="operand"><b>Choose a Operator:</b><label>
+
+<select id="operators">
+<option value="+">+</option>
+<option value="-">-</option>
+
+<option value="*">*</option>
+
+<option value="/">/</option>
+
+</select>
+<button onclick=calc()>=</button>
+
+<input type="text" id="result">
+</br>
+</br>
+<div1>
+<button onclick=" clearResult()">Refresh</button>
+
+</div1>
+</div>
+
+
+</body>
+<script>
+
+</script>
+</html>
